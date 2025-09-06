@@ -1,0 +1,27 @@
+{
+  "name": "techlap",
+  "version": "1.0.0",
+  "description": "techlap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huytran72/TechLap.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": {
+    "name": "Harry Tran",
+    "url": "https://portfolio-ts-v2.vercel.app/"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huytran72/TechLap/issues"
+  },
+  "homepage": "https://github.com/huytran72/TechLap#readme"
+}
