@@ -8,6 +8,16 @@
     "start": "tsc && node dist/app.js",
     "dev": "tsc && node dist/app.js"
   },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "exec": "ts-node ./src/app.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/huytran72/TechLap.git"
