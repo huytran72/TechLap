@@ -14,6 +14,10 @@ app.get("/about", (req, res) => {
   res.send("About Us")
 })
 
+app.get("/contact", (req, res) => {
+  res.send("Contact Us")
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
   console.log("ENV PORT:", process.env.PORT)
