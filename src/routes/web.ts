@@ -1,3 +1,7 @@
+import express from "express"
+
+const router = express.Router()
+
 app.get("/", (req, res) => {
   res.render("home.ejs")
 })
