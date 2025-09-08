@@ -6,6 +6,10 @@ import "dotenv/config"
 const app = express()
 const PORT = process.env.PORT || 8080
 
+//config view engine
+app.set("view engine", "ejs")
+app.set("views", "src/views")
+
 app.get("/", (req, res) => {
   res.send(`<h1 style="color: blue;">Hello World nodemon</h1>`)
 })
