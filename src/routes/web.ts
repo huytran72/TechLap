@@ -2,6 +2,7 @@ import express from "express"
 
 const router = express.Router()
 
+const webRoutes = () => {}
 router.get("/", (req, res) => {
   res.render("home.ejs")
 })
@@ -13,5 +14,3 @@ router.get("/about", (req, res) => {
 router.get("/contact", (req, res) => {
   res.send("Contact Us ............")
 })
-
-module.exports = router
