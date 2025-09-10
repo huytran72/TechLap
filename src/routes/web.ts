@@ -8,7 +8,7 @@ const webRoutes = (app) => {
   })
 
   router.get("/about", (req, res) => {
-    res.send("<h1>About Us</h1>")
+    res.send("<h1>About Us......</h1>")
   })
 
   router.get("/contact", (req, res) => {
