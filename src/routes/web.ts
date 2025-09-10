@@ -14,4 +14,6 @@ const webRoutes = (app) => {
   router.get("/contact", (req, res) => {
     res.send("Contact Us ............")
   })
+
+  app.use("/", router)
 }
