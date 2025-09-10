@@ -1,4 +1,4 @@
-import express from "express"
+import express, { Express } from "express"
 
 const router = express.Router()
 
