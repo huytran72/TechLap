@@ -17,3 +17,5 @@ const webRoutes = (app) => {
 
   app.use("/", router)
 }
+
+export default webRoutes
