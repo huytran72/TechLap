@@ -2,7 +2,7 @@ import express, { Express } from "express"
 
 const router = express.Router()
 
-const webRoutes = (app) => {
+const webRoutes = (app: Express) => {
   router.get("/", (req, res) => {
     res.render("home.ejs")
   })
