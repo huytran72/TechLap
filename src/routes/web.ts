@@ -7,7 +7,7 @@ const router = express.Router()
 const webRoutes = (app: Express) => {
   router.get("/", getHomePage)
 
-  router.get("/about", (req, res) => {
+  router.get("/create-user", (req, res) => {
     res.send("<h1>About Us......</h1>")
   })
 
