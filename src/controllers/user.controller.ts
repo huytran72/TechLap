@@ -5,7 +5,7 @@ const getHomePage = (req: Request, res: Response) => {
 }
 
 const getCreateUserPage = (req: Request, res: Response) => {
-  return res.render("create.user")
+  return res.render("create-user")
 }
 
 export { getHomePage, getCreateUserPage }
