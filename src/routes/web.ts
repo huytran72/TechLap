@@ -3,9 +3,7 @@ import express, { Express } from "express"
 const router = express.Router()
 
 const webRoutes = (app: Express) => {
-  router.get("/", (req, res) => {
-    res.render("home.ejs")
-  })
+  router.get("/", (req, res) => {})
 
   router.get("/about", (req, res) => {
     res.send("<h1>About Us......</h1>")
