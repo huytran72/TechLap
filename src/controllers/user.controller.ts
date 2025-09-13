@@ -4,4 +4,8 @@ const getHomePage = (req: Request, res: Response) => {
   return res.render("home.ejs")
 }
 
-export { getHomePage }
+const getCreateUserPage = (req: Request, res: Response) => {
+  return res.render("create.user.ejs")
+}
+
+export { getHomePage, getCreateUserPage }
