@@ -1,5 +1,5 @@
-const getHomepage = (req, res) => {
+const getHomePage = (req, res) => {
   return res.render("home.ejs")
 }
 
-export { getHomepage }
+export { getHomePage }
