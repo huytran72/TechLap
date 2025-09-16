@@ -1,6 +1,10 @@
 import express, { Express } from "express"
 import { get } from "http"
-import { getCreateUserPage, getHomePage } from "../controllers/user.controller"
+import {
+  getCreateUserPage,
+  getHomePage,
+  postCreateUser,
+} from "../controllers/user.controller"
 
 const router = express.Router()
 
