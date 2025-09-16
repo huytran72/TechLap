@@ -7,7 +7,7 @@ const router = express.Router()
 const webRoutes = (app: Express) => {
   router.get("/", getHomePage)
   router.get("/create-user", getCreateUserPage)
-  router.post("/create-user", getCreateUserPage)
+  router.post("/handle-create-user", getCreateUserPage)
 
   app.use("/", router)
 }
