@@ -9,7 +9,7 @@ const getCreateUserPage = (req: Request, res: Response) => {
 }
 
 const postCreateUser = (req: Request, res: Response) => {
-  console.log("check request", req.body)
+  console.log("check request: ", req.body)
   return res.redirect("/")
 }
 
