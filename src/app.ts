@@ -14,7 +14,7 @@ app.set("views", __dirname + "/views")
 // congfig routes
 webRoutes(app)
 
-// config req.body
+//config req.body
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
