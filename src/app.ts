@@ -11,12 +11,12 @@ const PORT = process.env.PORT || 8000
 app.set("view engine", "ejs")
 app.set("views", __dirname + "/views")
 
-// congfig routes
-webRoutes(app)
-
-//config req.body
+// config req.body
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+// config routes
+webRoutes(app)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
