@@ -9,7 +9,7 @@ const getCreateUserPage = (req: Request, res: Response) => {
 }
 
 const postCreateUser = (req: Request, res: Response) => {
-  return res.render("home")
+  return res.redirect("/")
 }
 
 export { getHomePage, getCreateUserPage, postCreateUser }
