@@ -1,4 +1,5 @@
 import { Request, Response } from "express"
+import { handleCreateUser } from "../services/user.service"
 
 const getHomePage = (req: Request, res: Response) => {
   return res.render("home")
@@ -12,6 +13,7 @@ const postCreateUser = (req: Request, res: Response) => {
   const { fullName, email, address } = req.body
 
   //handle data here
+  handleCreateUser(fullName, email, address)
   return res.redirect("/")
 }
 
