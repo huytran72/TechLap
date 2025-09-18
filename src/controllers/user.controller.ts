@@ -9,7 +9,7 @@ const getCreateUserPage = (req: Request, res: Response) => {
 }
 
 const postCreateUser = (req: Request, res: Response) => {
-  const { fullname, email, address } = req.body
+  const { fullName, email, address } = req.body
 
   //handle data here
   return res.redirect("/")
