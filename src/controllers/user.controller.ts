@@ -11,7 +11,7 @@ const getCreateUserPage = (req: Request, res: Response) => {
 const postCreateUser = (req: Request, res: Response) => {
   const { fullname, email, address } = req.body
 
-  console.log("check request: ", fullname, email, address)
+  //handle data here
   return res.redirect("/")
 }
 
