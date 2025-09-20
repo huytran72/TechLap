@@ -3,6 +3,8 @@
 import express from "express"
 import "dotenv/config"
 import webRoutes from "./routes/web"
+import { get } from "http"
+import { getConnection } from "./config/database"
 
 const app = express()
 const PORT = process.env.PORT || 8000
@@ -17,6 +19,8 @@ app.use(express.urlencoded({ extended: true }))
 
 // config routes
 webRoutes(app)
+
+getConnection()
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
