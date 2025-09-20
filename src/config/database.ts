@@ -9,3 +9,5 @@ const getConnection = async () => {
     database: "test",
   })
 }
+
+export { getConnection }
