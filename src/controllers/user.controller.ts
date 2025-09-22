@@ -3,7 +3,7 @@ import { getAllUsers, handleCreateUser } from "../services/user.service"
 
 const getHomePage = (req: Request, res: Response) => {
   const users = getAllUsers()
-  return res.render("home")
+  return res.render("home", { name: users })
 }
 
 const getCreateUserPage = (req: Request, res: Response) => {
