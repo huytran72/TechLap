@@ -1,7 +1,8 @@
 import { Request, Response } from "express"
-import { handleCreateUser } from "../services/user.service"
+import { getAllUsers, handleCreateUser } from "../services/user.service"
 
 const getHomePage = (req: Request, res: Response) => {
+  const users = getAllUsers()
   return res.render("home")
 }
 
