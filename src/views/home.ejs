@@ -43,15 +43,15 @@
           <tbody>
             <% users.forEach( function (result) { %>
             <tr>
-              <td>Alfreds Futterkiste</td>
-              <td>Maria Anders</td>
-              <td>Germany</td>
-              <td>Berlin</td>
+              <td><%= result.id %></td>
+              <td><%= result.fullName %></td>
+              <td><%= result.email %></td>
+              <td><%= result.address %></td>
               <td>
                 <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
-            <%= result.title %> <% }) %>
+            <% }) %>
           </tbody>
         </table>
       </div>
