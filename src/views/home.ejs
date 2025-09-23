@@ -42,8 +42,6 @@
           </thead>
           <tbody>
             <% users.forEach( function (result) { %>
-            <li><%= result.title %></li>
-            <% }) %>
             <tr>
               <td>Alfreds Futterkiste</td>
               <td>Maria Anders</td>
@@ -53,6 +51,7 @@
                 <button class="btn btn-danger">Delete</button>
               </td>
             </tr>
+            <%= result.title %> <% }) %>
           </tbody>
         </table>
       </div>
