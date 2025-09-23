@@ -41,12 +41,12 @@
             <th>Actions</th>
           </thead>
           <tbody>
-            <% users.forEach( function (result) { %>
+            <% users.forEach( function (user) { %>
             <tr>
-              <td><%= result.id %></td>
-              <td><%= result.fullName %></td>
-              <td><%= result.email %></td>
-              <td><%= result.address %></td>
+              <td><%= user.id %></td>
+              <td><%= user.fullName %></td>
+              <td><%= user.email %></td>
+              <td><%= user.address %></td>
               <td>
                 <button class="btn btn-danger">Delete</button>
               </td>
