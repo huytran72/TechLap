@@ -3,7 +3,6 @@ import { getAllUsers, handleCreateUser } from "../services/user.service"
 
 const getHomePage = async (req: Request, res: Response) => {
   const users = await getAllUsers()
-  console.log(">>> Check users:", users)
   return res.render("home", { users: users })
 }
 
