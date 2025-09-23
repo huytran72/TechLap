@@ -25,7 +25,7 @@
           align-items: center;
         "
       >
-        <h1 style="color: blue">List Users: <%= JSON.stringify(name) %></h1>
+        <h1 style="color: blue">List Users:</h1>
         <div>
           <a href="/create-user" class="btn btn-warning">Create a new user</a>
         </div>
@@ -41,6 +41,9 @@
             <th>Actions</th>
           </thead>
           <tbody>
+            <% users.forEach( function (result) { %>
+            <li><%= result.title %></li>
+            <% }) %>
             <tr>
               <td>Alfreds Futterkiste</td>
               <td>Maria Anders</td>
