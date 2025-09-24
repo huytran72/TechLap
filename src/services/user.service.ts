@@ -7,10 +7,15 @@ const handleCreateUser = async (
   address: string
 ) => {
   const connection = await getConnection()
-  const [results, fields] = await connection.execute(
-    "SELECT * FROM `table` WHERE `name` = ? AND `age` > ?",
-    ["Rick C-137", 53]
-  )
+
+  try {
+    const [results, fields] = await connection.execute(
+      "SELECT * FROM `table` WHERE `name` = ? AND `age` > ?",
+      ["Rick C-137", 53]
+    )
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 const getAllUsers = async () => {
