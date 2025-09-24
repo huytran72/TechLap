@@ -1,7 +1,12 @@
 import { get } from "http"
 import { getConnection } from "../config/database"
 
-const handleCreateUser = (fullName: string, email: string, address: string) => {
+const handleCreateUser = async (
+  fullName: string,
+  email: string,
+  address: string
+) => {
+  const connection = await getConnection()
   console.log(">>> Insert new user to DB:", { fullName, email, address })
 }
 
