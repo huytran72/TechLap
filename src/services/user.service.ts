@@ -9,10 +9,10 @@ const handleCreateUser = async (
   const connection = await getConnection()
 
   try {
-    const [results, fields] = await connection.execute(
-      "SELECT * FROM `table` WHERE `name` = ? AND `age` > ?",
-      ["Rick C-137", 53]
-    )
+    const sql = "INSERT INTO `users`(`name`, `age`) VALUES (?, ?), (?,?)"
+    const values = ["Josh", 19, "Page", 45]
+
+    const [result, fields] = await connection.execute(sql, values)
   } catch (err) {
     console.log(err)
   }
