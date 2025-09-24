@@ -14,8 +14,10 @@ const handleCreateUser = async (
     const values = [fullName, email, address]
 
     const [result, fields] = await connection.execute(sql, values)
+    return result
   } catch (err) {
     console.log(err)
+    return []
   }
 }
 
