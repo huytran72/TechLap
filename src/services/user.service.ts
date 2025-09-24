@@ -7,7 +7,10 @@ const handleCreateUser = async (
   address: string
 ) => {
   const connection = await getConnection()
-  console.log(">>> Insert new user to DB:", { fullName, email, address })
+  const [results, fields] = await connection.execute(
+    "SELECT * FROM `table` WHERE `name` = ? AND `age` > ?",
+    ["Rick C-137", 53]
+  )
 }
 
 const getAllUsers = async () => {
