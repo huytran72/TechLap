@@ -1,4 +1,3 @@
-import { get } from "http"
 import { getConnection } from "../config/database"
 
 const handleCreateUser = async (
