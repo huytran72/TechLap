@@ -1,10 +1,9 @@
 import express, { Express } from "express"
-import { get } from "http"
 import {
   getCreateUserPage,
   getHomePage,
   postCreateUser,
-} from "../controllers/user.controller"
+} from "controllers/user.controller"
 
 const router = express.Router()
 
