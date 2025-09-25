@@ -9,11 +9,7 @@
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "config/*": ["./src/app/_config/*"],
-      "environment/*": ["./src/environments/*"],
-      "shared/*": ["./src/app/_shared/*"],
-      "helpers/*": ["./src/helpers/*"],
-      "tests/*": ["./src/tests/*"]
+      "config/*": ["./src/app/_config/*"]
     }
   }
 }
