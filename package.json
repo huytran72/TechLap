@@ -17,7 +17,7 @@
     "ignore": [
       "node_modules"
     ],
-    "exec": "ts-node ./src/app.ts"
+    "exec": "ts-node -r tsconfig-paths/register ./src/app.ts"
   },
   "repository": {
     "type": "git",
