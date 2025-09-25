@@ -9,7 +9,11 @@
     "rootDir": "src",
     "baseUrl": ".",
     "paths": {
-      "config/*": ["./src/config/*"]
+      "config/*": ["./src/config/*"],
+      "controllers/*": ["./src/controllers/*"],
+      "models/*": ["./src/models/*"],
+      "routes/*": ["./src/routes/*"],
+      "services/*": ["./src/services/*"]
     }
   }
 }
