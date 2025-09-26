@@ -3,6 +3,7 @@ import {
   getCreateUserPage,
   getHomePage,
   postCreateUser,
+  postDeleteUser,
 } from "controllers/user.controller"
 
 const router = express.Router()
