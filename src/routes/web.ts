@@ -11,7 +11,7 @@ const webRoutes = (app: Express) => {
   router.get("/", getHomePage)
   router.get("/create-user", getCreateUserPage)
   router.post("/handle-create-user", postCreateUser)
-  router.post("/handle-delete-user/:id", postCreateUser)
+  router.post("/handle-delete-user/:id", postDeleteUser)
 
   app.use("/", router)
 }
