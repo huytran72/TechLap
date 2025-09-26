@@ -18,4 +18,12 @@ const postCreateUser = async (req: Request, res: Response) => {
   return res.redirect("/")
 }
 
-export { getHomePage, getCreateUserPage, postCreateUser }
+const postDeleteUser = async (req: Request, res: Response) => {
+  const userId = req.params.id
+
+  //handle data here
+  await handleDeleteUser(userId)
+  return res.redirect("/")
+}
+
+export { getHomePage, getCreateUserPage, postCreateUser, postDeleteUser }
