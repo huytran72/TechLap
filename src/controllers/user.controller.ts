@@ -23,10 +23,10 @@ const postCreateUser = async (req: Request, res: Response) => {
 }
 
 const postDeleteUser = async (req: Request, res: Response) => {
-  const userId = req.params.id
+  const id = req.params.id
 
   //handle data here
-  await handleDeleteUser(userId)
+  await handleDeleteUser(id)
   return res.redirect("/")
 }
 
