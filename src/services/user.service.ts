@@ -36,15 +36,15 @@ const getAllUsers = async () => {
 const handleDeleteUser = async (id: string) => {
   try {
     const connection = await getConnection()
-    const sql = "DELETE FROM `users` WHERE `id` = ? LIMIT 1"
+    const sql = "DELETE FROM `users` WHERE `id` = ?"
     const values = [id]
 
     const [result, fields] = await connection.execute(sql, values)
 
-    console.log(result)
-    console.log(fields)
+    return result
   } catch (err) {
     console.log(err)
+    return []
   }
 }
 
