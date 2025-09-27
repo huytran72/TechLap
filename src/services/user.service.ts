@@ -33,4 +33,6 @@ const getAllUsers = async () => {
   return []
 }
 
-export { handleCreateUser, getAllUsers }
+const handleDeleteUser = async (userId: string) => {}
+
+export { handleCreateUser, getAllUsers, handleDeleteUser }
