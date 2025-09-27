@@ -33,6 +33,19 @@ const getAllUsers = async () => {
   return []
 }
 
-const handleDeleteUser = async (userId: string) => {}
+const handleDeleteUser = async (id: string) => {
+  try {
+    const connection = await getConnection()
+    const sql = "DELETE FROM `users` WHERE `name` = ? LIMIT 1"
+    const values = ["Page"]
+
+    const [result, fields] = await connection.execute(sql, values)
+
+    console.log(result)
+    console.log(fields)
+  } catch (err) {
+    console.log(err)
+  }
+}
 
 export { handleCreateUser, getAllUsers, handleDeleteUser }
