@@ -49,6 +49,9 @@
               <td><%= user.address %></td>
               <td>
                 <div style="display: flex; gap: 10px">
+                  <a hre="/handle-view-user/<%= user.id %>" class="btn btn-info"
+                    >View a</a
+                  >
                   <form action="/handle-view-user/<%= user.id %>" method="post">
                     <button type="submit" class="btn btn-warning">View</button>
                   </form>
