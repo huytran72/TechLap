@@ -33,7 +33,7 @@ const postDeleteUser = async (req: Request, res: Response) => {
 const getViewUser = async (req: Request, res: Response) => {
   const { id } = req.params
   // You can implement the logic to fetch and display user details here
-  return res.send(`User details for user with ID: ${id}`)
+  return res.render("view-user.ejs", { userId: id })
 }
 
 export {
