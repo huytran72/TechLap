@@ -63,4 +63,4 @@ const getUserById = async (id: string) => {
   }
 }
 
-export { handleCreateUser, getAllUsers, handleDeleteUser }
+export { handleCreateUser, getAllUsers, handleDeleteUser, getUserById }
