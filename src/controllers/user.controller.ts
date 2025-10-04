@@ -42,7 +42,7 @@ const postUpdateUser = async (req: Request, res: Response) => {
   const { id } = req.body
 
   const user = await getUserById(id)
-  return res.render("view-user.ejs", { id: id, user: user })
+  return res.redirect("/")
 }
 
 export {
