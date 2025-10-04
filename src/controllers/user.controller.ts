@@ -4,6 +4,7 @@ import {
   getUserById,
   handleCreateUser,
   handleDeleteUser,
+  updateUserById,
 } from "services/user.service"
 
 const getHomePage = async (req: Request, res: Response) => {
