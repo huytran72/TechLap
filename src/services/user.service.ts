@@ -70,10 +70,10 @@ const updateUserById = async (
   try {
     const connection = await getConnection()
     const sql =
-      "UPDATE `users` SET `email` = ?, `address` = ?, `name` = ? WHERE `id` = ? LIMIT 1"
-    const values = [email, address, name, id]
+      "UPDATE `users` SET `email` = ?, `address` = ?, `name` = ? WHERE `id` = ?"
+    const values = [name, email, address, id]
     const [result, fields] = await connection.execute(sql, values)
-    return result[0]
+    return result
   } catch (err) {
     console.log(err)
     return []
