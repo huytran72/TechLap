@@ -2,11 +2,19 @@ import { getConnection } from "config/database"
 import { PrismaClient } from "@prisma/client"
 
 const handleCreateUser = async (
-  fullName: string,
+  name: string,
   email: string,
   address: string
 ) => {
   const prisma = new PrismaClient()
+
+  prisma.user.create({
+    data: {
+      name: name,
+      email: email,
+      address: address,
+    },
+  })
 }
 
 const getAllUsers = async () => {
