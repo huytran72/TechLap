@@ -6,19 +6,7 @@ const handleCreateUser = async (
   email: string,
   address: string
 ) => {
-  const connection = await getConnection()
-
-  try {
-    const sql =
-      "INSERT INTO `users`(`name`, `email`, `address`) VALUES (?, ?, ?)"
-    const values = [fullName, email, address]
-
-    const [result, fields] = await connection.execute(sql, values)
-    return result
-  } catch (err) {
-    console.log(err)
-    return []
-  }
+  const prisma = new PrismaClient()
 }
 
 const getAllUsers = async () => {
