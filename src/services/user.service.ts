@@ -8,7 +8,7 @@ const handleCreateUser = async (
 ) => {
   const prisma = new PrismaClient()
 
-  prisma.user.create({
+  await prisma.user.create({
     data: {
       name: name,
       email: email,
