@@ -1,5 +1,5 @@
 import { getConnection } from "config/database"
-import { PrismaClient } from "@prisma/client"
+import { prisma } from "config/client"
 
 const handleCreateUser = async (
   name: string,
