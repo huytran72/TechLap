@@ -22,7 +22,7 @@ const getAllUsers = async () => {
 
   // A simple SELECT query
   try {
-    const [results, fields] = await connection.query("SELECT * FROM `users`")
+    const [results, fields] = await connection.query("SELECT * FROM `user`")
     return results
   } catch (err) {
     console.log(err)
