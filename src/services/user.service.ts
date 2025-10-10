@@ -36,16 +36,10 @@ const handleDeleteUser = async (id: string) => {
 }
 
 const getUserById = async (id: string) => {
-  try {
-    const connection = await getConnection()
-    const sql = "SELECT * FROM `user` WHERE `id` = ?"
-    const values = [id]
-    const [result, fields] = await connection.execute(sql, values)
-    return result[0]
-  } catch (err) {
-    console.log(err)
-    return []
-  }
+  const user = await prisma.user.findUnique({
+    where: { id: Number(id) },
+  })
+  return user
 }
 
 const updateUserById = async (
