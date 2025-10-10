@@ -54,17 +54,15 @@ const updateUserById = async (
   address: string,
   name: string
 ) => {
-  try {
-    const connection = await getConnection()
-    const sql =
-      "UPDATE `users` SET `name` = ?, `email` = ?, `address` = ? WHERE `id` = ?"
-    const values = [name, email, address, id]
-    const [result, fields] = await connection.execute(sql, values)
-    return result
-  } catch (err) {
-    console.log(err)
-    return []
-  }
+  const updatedUser = await prisma.user.update({
+    where: { id: Number(id) },
+    data: {
+      email: email,
+      address: address,
+      name: name,
+    },
+  })
+  return updatedUser
 }
 
 export {
