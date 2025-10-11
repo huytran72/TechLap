@@ -27,10 +27,10 @@ const handleDeleteUser = async (id: string) => {
 }
 
 const getUserById = async (id: string) => {
-  const user = await prisma.user.findUnique({
+  const result = await prisma.user.findUnique({
     where: { id: Number(id) },
   })
-  return user
+  return result
 }
 
 const updateUserById = async (
