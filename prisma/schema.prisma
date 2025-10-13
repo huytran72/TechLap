@@ -9,19 +9,18 @@ datasource db {
 
 model User {
   @@map("users")
-  id      Int     @id @default(autoincrement())
   name    String? @db.VarChar(255)
   email   String? @db.VarChar(255)
   address String? @db.VarChar(255)
 
-  id		number
-username	string
-password	string
-fullName	string
-address	string
-phone		string
-accountType	string
-avatar		string
+  id		Int     @id @default(autoincrement())
+username	String @db.VarChar(255)
+password	String @db.VarChar(255)
+fullName	String? @db.VarChar(255)
+address	String? @db.VarChar(255)
+phone		String? @db.VarChar(255)
+accountType	String? @db.VarChar(255)
+avatar		String? @db.VarChar(255)
 
 }
 
