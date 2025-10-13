@@ -13,8 +13,16 @@ model User {
   name    String? @db.VarChar(255)
   email   String? @db.VarChar(255)
   address String? @db.VarChar(255)
+
+  id		number
+username	string
+password	string
+fullName	string
+address	string
+phone		string
+accountType	string
+avatar		string
+
 }
 
-model post {
-  id Int @id
-}
+
