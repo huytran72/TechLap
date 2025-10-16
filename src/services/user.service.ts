@@ -11,6 +11,8 @@ const handleCreateUser = async (
       name: name,
       username: email,
       address: address,
+      password: "",
+      accountType: "",
     },
   })
 }
