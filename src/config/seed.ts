@@ -3,13 +3,13 @@ const innitDatabase = async () => {
   await prisma.user.createMany({
     data: [
       {
-        username: "user1",
+        username: "user1@gmail.com",
         password: "123456",
         accountType: "system",
       },
       {
-        username: "admin",
-        password: "adminpassword",
+        username: "admin@gmail.com",
+        password: "123456",
         accountType: "admin",
       },
     ],
