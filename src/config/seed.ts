@@ -4,8 +4,8 @@ const innitDatabase = async () => {
     data: [
       {
         username: "user1",
-        password: "password1",
-        accountType: "user",
+        password: "123456",
+        accountType: "system",
       },
       {
         username: "admin",
