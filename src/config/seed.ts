@@ -1,3 +1,4 @@
+import { prisma } from "config/client"
 const innitDatabase = async () => {
   await prisma.user.createMany({
     data: [
