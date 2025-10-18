@@ -3,6 +3,7 @@
 import express from "express"
 import "dotenv/config"
 import webRoutes from "./routes/web"
+import innitDatabase from "config/seed"
 
 const app = express()
 const PORT = process.env.PORT || 8000
@@ -17,6 +18,9 @@ app.use(express.urlencoded({ extended: true }))
 
 // config routes
 webRoutes(app)
+
+//seeding database
+innitDatabase()
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
