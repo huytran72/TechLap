@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
 const getDashboardPage = async (req: Request, res: Response) => {
-  return res.render("home", { users: users })
+  return res.render("home")
 }
 export { getDashboardPage }
