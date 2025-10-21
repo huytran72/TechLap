@@ -7,6 +7,7 @@ import {
   getViewUser,
   postUpdateUser,
 } from "controllers/user.controller"
+import { getDashboardPage } from "controllers/admin/dashboard.controller"
 
 const router = express.Router()
 
@@ -19,7 +20,7 @@ const webRoutes = (app: Express) => {
   router.post("/handle-update-user", postUpdateUser)
 
   //admin routes
-  router.get("/admin", getHomePage)
+  router.get("/admin", getDashboardPage)
 
   app.use("/", router)
 }
