@@ -1,4 +1,5 @@
 import { Request, Response } from "express"
-const getHomePage = async (req: Request, res: Response) => {
+const getDashboardPage = async (req: Request, res: Response) => {
   return res.render("home", { users: users })
 }
+export { getDashboardPage }
