@@ -7,7 +7,10 @@ import {
   getViewUser,
   postUpdateUser,
 } from "controllers/user.controller"
-import { getDashboardPage } from "controllers/admin/dashboard.controller"
+import {
+  getAdminUserPage,
+  getDashboardPage,
+} from "controllers/admin/dashboard.controller"
 
 const router = express.Router()
 
