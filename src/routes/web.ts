@@ -21,7 +21,7 @@ const webRoutes = (app: Express) => {
 
   //admin routes
   router.get("/admin", getDashboardPage)
-
+  router.get("/admin/user", getAdminUserPage)
   app.use("/", router)
 }
 
