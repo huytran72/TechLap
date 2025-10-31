@@ -10,6 +10,8 @@ import {
 import {
   getAdminUserPage,
   getDashboardPage,
+  getAdminProductPage,
+  getAdminOrderPage,
 } from "controllers/admin/dashboard.controller"
 
 const router = express.Router()
