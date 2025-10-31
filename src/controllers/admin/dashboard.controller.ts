@@ -7,7 +7,7 @@ const getAdminUserPage = async (req: Request, res: Response) => {
   return res.render("admin/user/show.ejs")
 }
 
-const getAdminUserPage = async (req: Request, res: Response) => {
-  return res.render("admin/user/show.ejs")
+const getAdminProductPage = async (req: Request, res: Response) => {
+  return res.render("admin/product/show.ejs")
 }
-export { getDashboardPage, getAdminUserPage }
+export { getDashboardPage, getAdminUserPage, getAdminProductPage }
