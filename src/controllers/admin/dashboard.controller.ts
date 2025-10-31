@@ -10,4 +10,13 @@ const getAdminUserPage = async (req: Request, res: Response) => {
 const getAdminProductPage = async (req: Request, res: Response) => {
   return res.render("admin/product/show.ejs")
 }
-export { getDashboardPage, getAdminUserPage, getAdminProductPage }
+
+const getAdminOrderPage = async (req: Request, res: Response) => {
+  return res.render("admin/order/show.ejs")
+}
+export {
+  getDashboardPage,
+  getAdminUserPage,
+  getAdminProductPage,
+  getAdminOrderPage,
+}
