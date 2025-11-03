@@ -4,6 +4,7 @@ const getDashboardPage = async (req: Request, res: Response) => {
 }
 
 const getAdminUserPage = async (req: Request, res: Response) => {
+  const users = await getAllUsers()
   return res.render("admin/user/show.ejs")
 }
 
