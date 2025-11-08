@@ -9,7 +9,7 @@
     />
     <meta name="description" content="Harry Tran - TechLap Project" />
     <meta name="author" content="Harry Tran" />
-    <title>Manage User - Harry Tran</title>
+    <title>Create User - Harry Tran</title>
     <link href="/admin/css/styles.css" rel="stylesheet" />
     <script
       src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
@@ -31,63 +31,6 @@
               <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
               <li class="breadcrumb-item active">Users</li>
             </ol>
-            <div>
-              <div
-                style="
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-                "
-              >
-                <h5 style="color: blue">Table Users:</h5>
-                <div>
-                  <a href="/create-user" class="btn btn-warning"
-                    >Create a new user</a
-                  >
-                </div>
-              </div>
-              <hr />
-              <table class="table table-hover table-bordered">
-                <thead>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Address</th>
-                  <th>Actions</th>
-                </thead>
-                <tbody>
-                  <% users.forEach( function (user) { %>
-                  <tr>
-                    <td><%= user.id %></td>
-                    <td><%= user.name %></td>
-                    <td><%= user.username %></td>
-                    <td><%= user.address %></td>
-                    <td>
-                      <div style="display: flex; gap: 10px">
-                        <!-- <a href="/handle-view-user/<%= user.id %>">View a</a> -->
-                        <form
-                          action="/handle-view-user/<%= user.id %>"
-                          method="get"
-                        >
-                          <button type="submit" class="btn btn-warning">
-                            View
-                          </button>
-                        </form>
-                        <form
-                          action="/handle-delete-user/<%= user.id %>"
-                          method="post"
-                        >
-                          <button type="submit" class="btn btn-danger">
-                            Delete
-                          </button>
-                        </form>
-                      </div>
-                    </td>
-                  </tr>
-                  <% }) %>
-                </tbody>
-              </table>
-            </div>
           </div>
         </main>
         <%- include('../layout/footer'); -%>
