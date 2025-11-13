@@ -17,6 +17,21 @@ const innitDatabase = async () => {
         },
       ],
     })
+  } else if (countUser === 0) {
+    await prisma.user.createMany({
+      data: [
+        {
+          username: "user1@gmail.com",
+          password: "123456",
+          accountType: "system",
+        },
+        {
+          username: "admin@gmail.com",
+          password: "123456",
+          accountType: "admin",
+        },
+      ],
+    })
   } else {
     console.log("Database has been seeded")
   }
