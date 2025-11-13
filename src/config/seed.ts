@@ -1,6 +1,7 @@
 import { prisma } from "config/client"
 const innitDatabase = async () => {
   const countUser = await prisma.user.count()
+  const countRole = await prisma.role.count()
   if (countUser === 0) {
     await prisma.user.createMany({
       data: [
