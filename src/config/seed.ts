@@ -18,11 +18,14 @@ const innitDatabase = async () => {
       ],
     })
   } else if (countRole === 0) {
-    await prisma.user.createMany({
+    await prisma.role.createMany({
       data: [
         {
-          username: "user1@gmail.com",
-          password: "123456",
+          name: "system",
+        },
+        {
+          name: "admin",
+        },
           accountType: "system",
         },
         {
