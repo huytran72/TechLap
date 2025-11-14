@@ -17,7 +17,7 @@ const innitDatabase = async () => {
         },
       ],
     })
-  } else if (countUser === 0) {
+  } else if (countRole === 0) {
     await prisma.user.createMany({
       data: [
         {
