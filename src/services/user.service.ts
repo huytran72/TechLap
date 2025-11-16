@@ -65,4 +65,5 @@ export {
   handleDeleteUser,
   getUserById,
   updateUserById,
+  getAllRoles,
 }
