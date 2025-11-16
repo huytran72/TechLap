@@ -5,6 +5,7 @@ import {
   handleCreateUser,
   handleDeleteUser,
   updateUserById,
+  getAllRoles,
 } from "services/user.service"
 
 const getHomePage = async (req: Request, res: Response) => {
