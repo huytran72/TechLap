@@ -66,8 +66,11 @@
                       <div class="mb-3 col-6">
                         <label class="form-label">Role</label>
                         <select class="form-select">
-                          <option selected>Choose...</option>
-                          <option>...</option>
+                          <% options.forEach((subject,index) => { %>
+  <option value="<%-options.id %>" <%= options[index] === index ? 'selected' : '' %>>
+    <%- subject.title %>
+  </option>
+<%})%>
                         </select>
                       </div>
                     </div>
