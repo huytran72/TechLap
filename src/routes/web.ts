@@ -26,7 +26,7 @@ const webRoutes = (app: Express) => {
   router.get("/admin", getDashboardPage)
   router.get("/admin/user", getAdminUserPage)
   router.get("/admin/create-user", getCreateUserPage)
-  router.post("/handle-create-user", postCreateUser)
+  router.post("/admin/handle-create-user", postCreateUser)
 
   router.get("/admin/product", getAdminProductPage)
   router.get("/admin/order", getAdminOrderPage)
