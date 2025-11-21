@@ -29,7 +29,14 @@ const webRoutes = (app: Express) => {
   router.get("/admin", getDashboardPage)
   router.get("/admin/user", getAdminUserPage)
   router.get("/admin/create-user", getCreateUserPage)
-  router.post("/admin/handle-create-user", postCreateUser)
+  // router.post("/admin/handle-create-user", postCreateUser)
+  router.post(
+    "/admin/handle-create-user",
+    upload.single("avatar"),
+    (req, res) => {
+      return res.send("ok")
+    }
+  )
 
   router.get("/admin/product", getAdminProductPage)
   router.get("/admin/order", getAdminOrderPage)
