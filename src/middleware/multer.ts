@@ -7,7 +7,8 @@ const fileUploadMiddleware = (fieldName: string, dir: string = "images") => {
     storage: multer.diskStorage({
       destination: "public/" + dir,
       filename: (req, file, cb) => {
-        cb(null, v4() + path.extname(file.originalname))
+        const extension = path.extname(file.originalname)
+        cb(null, v4() + extension)
       },
     }),
     limits: {
