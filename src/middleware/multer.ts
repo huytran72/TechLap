@@ -8,7 +8,7 @@ const fileUploadMiddleware = (
 ) => {
   return multer({
     storage: multer.diskStorage({
-      destination: "assets/" + dir,
+      destination: "public/" + dir,
       filename: (req, file, cb) => {
         cb(null, v4() + path.extname(file.originalname))
       },
