@@ -26,8 +26,12 @@ const webRoutes = (app: Express) => {
   //admin routes
   router.get("/admin", getDashboardPage)
   router.get("/admin/user", getAdminUserPage)
-  router.get("/admin/create-user", fileUploadMiddleware(), getCreateUserPage)
-  // router.post("/admin/handle-create-user", postCreateUser)
+  router.get("/admin/create-user", getCreateUserPage)
+  router.post(
+    "/admin/handle-create-user",
+    fileUploadMiddleware("avatar"),
+    postCreateUser
+  )
   router.post(
     "/admin/handle-create-user",
     upload.single("avatar"),
