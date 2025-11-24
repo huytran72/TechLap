@@ -32,14 +32,6 @@ const webRoutes = (app: Express) => {
     fileUploadMiddleware("avatar"),
     postCreateUser
   )
-  router.post(
-    "/admin/handle-create-user",
-    upload.single("avatar"),
-    (req, res) => {
-      return res.send("ok")
-    }
-  )
-
   router.get("/admin/product", getAdminProductPage)
   router.get("/admin/order", getAdminOrderPage)
 
