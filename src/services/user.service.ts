@@ -14,6 +14,7 @@ const handleCreateUser = async (
       password: "",
       accountType: "",
       avatar: "",
+      phone: "",
     },
   })
 }
