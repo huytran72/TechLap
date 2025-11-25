@@ -1,5 +1,5 @@
 export const ACCOUNT_TYPE = {
-  SYSTEM: "",
-  GOOGLE: "google",
-  GITHUB: "github",
+  SYSTEM: "SYSTEM",
+  GOOGLE: "GOOGLE",
+  GITHUB: "GITHUB",
 }
