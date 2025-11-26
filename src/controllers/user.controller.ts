@@ -20,6 +20,7 @@ const getCreateUserPage = async (req: Request, res: Response) => {
 
 const postCreateUser = async (req: Request, res: Response) => {
   const { name, username, phone, role, address } = req.body
+  const file = req.file
 
   //handle data here
   await handleCreateUser(name, username, address, phone, avatar)
