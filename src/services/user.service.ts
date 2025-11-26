@@ -6,7 +6,7 @@ const handleCreateUser = async (
   email: string,
   address: string
 ) => {
-  await prisma.user.create({
+  const newUser = await prisma.user.create({
     data: {
       name: name,
       username: email,
