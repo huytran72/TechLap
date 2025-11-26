@@ -17,6 +17,7 @@ const handleCreateUser = async (
       phone: "",
     },
   })
+  return newUser
 }
 
 const getAllUsers = async () => {
