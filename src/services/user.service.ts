@@ -1,4 +1,5 @@
 import { prisma } from "config/client"
+import { ACCOUNT_TYPE } from "config/constant"
 
 const handleCreateUser = async (
   name: string,
