@@ -12,7 +12,7 @@ const handleCreateUser = async (
       username: email,
       address: address,
       password: "",
-      accountType: "",
+      accountType: "ACCOUNT_TYPE.SYSTEM",
       avatar: "",
       phone: "",
     },
