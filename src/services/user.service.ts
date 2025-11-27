@@ -22,10 +22,10 @@ const handleCreateUser = async (
   return newUser
 }
 
-// const getAllUsers = async () => {
-//   const users = await prisma.user.findMany()
-//   return users
-// }
+const getAllUsers = async () => {
+  const users = await prisma.user.findMany()
+  return users
+}
 
 // const getAllRoles = async () => {
 //   const roles = await prisma.role.findMany()
