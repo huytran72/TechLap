@@ -19,12 +19,12 @@ const getCreateUserPage = async (req: Request, res: Response) => {
 }
 
 const postCreateUser = async (req: Request, res: Response) => {
-  const { name, username, phone, role, address } = req.body
+  const { fullName, username, phone, role, address } = req.body
   const file = req.file
   const avatar = file.filename
 
   //handle data here
-  await handleCreateUser(name, username, address, phone, avatar)
+  await handleCreateUser(fullName, username, address, phone, avatar)
   return res.redirect("/")
 }
 
