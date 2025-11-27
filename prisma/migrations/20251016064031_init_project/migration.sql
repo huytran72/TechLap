@@ -3,7 +3,7 @@ CREATE TABLE `users` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `username` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
-    `name` VARCHAR(255) NULL,
+    `fullName` VARCHAR(255) NULL,
     `address` VARCHAR(255) NULL,
     `phone` VARCHAR(255) NULL,
     `accountType` VARCHAR(255) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `users` (
 -- CreateTable
 CREATE TABLE `roles` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(100) NOT NULL,
+    `fullName` VARCHAR(100) NOT NULL,
     `description` VARCHAR(255) NOT NULL,
 
     PRIMARY KEY (`id`)
@@ -32,7 +32,7 @@ CREATE TABLE `orders` (
 -- CreateTable
 CREATE TABLE `products` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(255) NOT NULL,
+    `fullName` VARCHAR(255) NOT NULL,
     `price` INTEGER NOT NULL,
     `image` VARCHAR(255) NOT NULL,
     `detailDesc` VARCHAR(255) NOT NULL,
