@@ -27,48 +27,48 @@ const getAllUsers = async () => {
   return users
 }
 
-// const getAllRoles = async () => {
-//   const roles = await prisma.role.findMany()
-//   return roles
-// }
+const getAllRoles = async () => {
+  const roles = await prisma.role.findMany()
+  return roles
+}
 
-// const handleDeleteUser = async (id: string) => {
-//   await prisma.user.delete({
-//     where: { id: Number(id) },
-//   })
-// }
+const handleDeleteUser = async (id: string) => {
+  await prisma.user.delete({
+    where: { id: Number(id) },
+  })
+}
 
-// const getUserById = async (id: string) => {
-//   const result = await prisma.user.findUnique({
-//     where: { id: Number(id) },
-//   })
-//   return result
-// }
+const getUserById = async (id: string) => {
+  const result = await prisma.user.findUnique({
+    where: { id: Number(id) },
+  })
+  return result
+}
 
-// const updateUserById = async (
-//   id: string,
-//   email: string,
-//   address: string,
-//   fullName: string
-// ) => {
-//   const updatedUser = await prisma.user.update({
-//     where: { id: Number(id) },
-//     data: {
-//       username: email,
-//       address: address,
-//       name: fullName,
-//       password: "",
-//       accountType: "",
-//     },
-//   })
-//   return updatedUser
-// }
+const updateUserById = async (
+  id: string,
+  email: string,
+  address: string,
+  fullName: string
+) => {
+  const updatedUser = await prisma.user.update({
+    where: { id: Number(id) },
+    data: {
+      username: email,
+      address: address,
+      name: fullName,
+      password: "",
+      accountType: "",
+    },
+  })
+  return updatedUser
+}
 
 export {
   handleCreateUser,
-  // getAllUsers,
-  // handleDeleteUser,
-  // getUserById,
-  // updateUserById,
-  // getAllRoles,
+  getAllUsers,
+  handleDeleteUser,
+  getUserById,
+  updateUserById,
+  getAllRoles,
 }
