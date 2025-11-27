@@ -56,7 +56,7 @@ const updateUserById = async (
     data: {
       username: email,
       address: address,
-      name: name,
+      fullName: fullName,
       password: "",
       accountType: "",
     },
