@@ -1,11 +1,11 @@
 import { Request, Response } from "express"
 import {
   getAllUsers,
-  getUserById,
+  // getUserById,
   handleCreateUser,
-  handleDeleteUser,
-  updateUserById,
-  getAllRoles,
+  // handleDeleteUser,
+  // updateUserById,
+  // getAllRoles,
 } from "services/user.service"
 
 const getHomePage = async (req: Request, res: Response) => {
