@@ -57,7 +57,7 @@ const updateUserById = async (
       name: fullName,
       email: email,
       address: address,
-      // password: "",
+      password: "",
       // accountType: "",
     },
   })
