@@ -14,8 +14,8 @@ model User {
   address String? @db.VarChar(255)
 
   id		Int     @id @default(autoincrement())
-username	string
-password	string
+username	String? @db.VarChar(255)
+password	String @db.VarChar(255)
 fullName	string
 address	string
 phone		string
