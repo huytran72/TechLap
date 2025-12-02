@@ -30,7 +30,7 @@ model Role {
 
 model Order {
   id		      Int     @id @default(autoincrement())
-  totalPrice	Int      @db.VarChar(255)
+  totalPrice	Int     
 
   @@map("orders")
 }
