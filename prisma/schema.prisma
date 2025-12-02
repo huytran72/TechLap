@@ -28,7 +28,7 @@ model Role {
   @@map("roles")
 }
 
-model User {
+model Order {
   id		      Int     @id @default(autoincrement())
   username	  String? @db.VarChar(255)
   password	  String @db.VarChar(255)
