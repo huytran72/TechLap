@@ -37,9 +37,7 @@ model Order {
 
 model Product {
   id		      Int     @id @default(autoincrement())
-  username	  String? @db.VarChar(255)
-  id		number
-  name		string
+  name	      String? @db.VarChar(255)
   price		number
   image		string
   detailDesc	string
