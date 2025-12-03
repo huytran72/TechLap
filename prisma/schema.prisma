@@ -35,7 +35,7 @@ model Order {
   @@map("orders")
 }
 
-model P {
+model Product {
   id		      Int     @id @default(autoincrement())
   username	  String? @db.VarChar(255)
   id		number
