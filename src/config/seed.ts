@@ -21,11 +21,11 @@ const innitDatabase = async () => {
     await prisma.role.createMany({
       data: [
         {
-          fullName: "ADMIN",
+          Role: "ADMIN",
           description: "Administrator with full access",
         },
         {
-          fullName: "USER",
+          Role: "USER",
           description: "Standard user",
         },
       ],
