@@ -5,8 +5,8 @@ const handleCreateUser = async (
   name: string,
   email: string,
   address: string
-  // phone: string,
-  // avatar: string
+  phone: string,
+  avatar: string
 ) => {
   const newUser = await prisma.user.create({
     data: {
@@ -15,8 +15,8 @@ const handleCreateUser = async (
       address: address,
       password: "123456",
       accountType: "ACCOUNT_TYPE.SYSTEM",
-      // avatar: avatar,
-      // phone: phone,
+      avatar: avatar,
+      phone: phone,
     },
   })
   return newUser
