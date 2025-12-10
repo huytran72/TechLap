@@ -2,7 +2,7 @@ import { prisma } from "config/client"
 import { ACCOUNT_TYPE } from "config/constant"
 
 const handleCreateUser = async (
-  name: string,
+  fullName: string,
   email: string,
   address: string,
   phone: string,
@@ -10,8 +10,8 @@ const handleCreateUser = async (
 ) => {
   const newUser = await prisma.user.create({
     data: {
-      name: fullName,
-      email: email,
+      fullName: fullName,
+      username: email,
       address: address,
       password: "123456",
       accountType: "ACCOUNT_TYPE.SYSTEM",
