@@ -14,7 +14,7 @@ model User {
   fullName	  String? @db.VarChar(255)
   address	    String? @db.VarChar(255)
   phone		    String? @db.VarChar(255)
-  accountType	String? @db.VarChar(255)
+  accountType	String  @db.VarChar(255)
   avatar		  String? @db.VarChar(255)
 
   @@map("users")
