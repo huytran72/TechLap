@@ -16,6 +16,9 @@ app.set("views", __dirname + "/views")
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+// config static files: images/css/js
+app.use(express.static("public"))
+
 // config routes
 webRoutes(app)
 
