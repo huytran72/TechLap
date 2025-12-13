@@ -10,7 +10,7 @@ const handleCreateUser = async (
   phone: string,
   avatar: string
 ) => {
-  const defaultPassword = bc
+  const defaultPassword = await bcrypt.hash("123456", saltRounds)
   const newUser = await prisma.user.create({
     data: {
       fullName: fullName,
