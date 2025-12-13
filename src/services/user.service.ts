@@ -1,5 +1,6 @@
 import { prisma } from "config/client"
 import { ACCOUNT_TYPE } from "config/constant"
+const bcrypt = require("bcryptjs")
 
 const handleCreateUser = async (
   fullName: string,
