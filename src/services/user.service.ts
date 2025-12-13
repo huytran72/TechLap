@@ -1,6 +1,6 @@
 import { prisma } from "config/client"
 import { ACCOUNT_TYPE } from "config/constant"
-const bcrypt = require("bcryptjs")
+import bcrypt from "bcrypt"
 const saltRounds = 10
 
 const handleCreateUser = async (
@@ -10,6 +10,7 @@ const handleCreateUser = async (
   phone: string,
   avatar: string
 ) => {
+  const defaultPassword = bc
   const newUser = await prisma.user.create({
     data: {
       fullName: fullName,
