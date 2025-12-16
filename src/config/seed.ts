@@ -10,7 +10,7 @@ const innitDatabase = async () => {
       data: [
         {
           username: "user1@gmail.com",
-          password: await hashPassword("123456"),
+          password: defaultPassword,
           accountType: "SYSTEM",
         },
         {
