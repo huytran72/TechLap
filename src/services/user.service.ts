@@ -78,4 +78,5 @@ export {
   getUserById,
   updateUserById,
   getAllRoles,
+  hashPassword,
 }
