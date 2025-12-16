@@ -4,6 +4,8 @@ const innitDatabase = async () => {
   const countUser = await prisma.user.count()
   const countRole = await prisma.role.count()
   if (countUser === 0) {
+    const defaultPassword = await hashPassword("123456")
+
     await prisma.user.createMany({
       data: [
         {
