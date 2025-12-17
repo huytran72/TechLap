@@ -18,7 +18,7 @@ const innitDatabase = async () => {
         {
           username: "admin@gmail.com",
           password: defaultPassword,
-          accountType: "SYSTEM",
+          accountType: ACCOUNT_TYPE.SYSTEM,
         },
       ],
     })
