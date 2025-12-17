@@ -11,6 +11,7 @@ const innitDatabase = async () => {
     await prisma.user.createMany({
       data: [
         {
+          fullName: "User One",
           username: "user1@gmail.com",
           password: defaultPassword,
           accountType: ACCOUNT_TYPE.SYSTEM,
