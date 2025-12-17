@@ -1,5 +1,7 @@
 import { prisma } from "config/client"
 import { hashPassword } from "services/user.service"
+import { ACCOUNT_TYPE } from "config/constant"
+
 const innitDatabase = async () => {
   const countUser = await prisma.user.count()
   const countRole = await prisma.role.count()
