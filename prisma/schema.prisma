@@ -16,6 +16,7 @@ model User {
   phone		    String? @db.VarChar(255)
   accountType	String  @db.VarChar(50)
   avatar		  String? @db.VarChar(255)
+  
   @@map("users")
 }
 
