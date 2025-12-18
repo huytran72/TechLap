@@ -24,6 +24,8 @@ model Role {
   name	      String  @db.VarChar(100)
   description	String  @db.VarChar(255)
 
+  users User[] @relation("UserRoles", references: [id])
+
   @@map("roles")
 }
 
