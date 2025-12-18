@@ -18,7 +18,7 @@ model User {
   avatar		  String? @db.VarChar(255)
 
   role Role @relation(fields: [roleId], references: [id])
-  authorId Int
+  roleId Int
 
   @@map("users")
 }
@@ -28,7 +28,7 @@ model Role {
   name	      String  @db.VarChar(100)
   description	String  @db.VarChar(255)
 
-  users User[] @relation("UserRoles", references: [id])
+  users User[]
 
   @@map("roles")
 }
