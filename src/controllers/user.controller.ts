@@ -24,7 +24,7 @@ const postCreateUser = async (req: Request, res: Response) => {
   const avatar = file?.filename ?? null
 
   //handle data here
-  await handleCreateUser(fullName, username, address, phone, avatar)
+  await handleCreateUser(fullName, username, address, phone, avatar, role)
   return res.redirect("/")
 }
 
