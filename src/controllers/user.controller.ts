@@ -21,7 +21,7 @@ const getCreateUserPage = async (req: Request, res: Response) => {
 const postCreateUser = async (req: Request, res: Response) => {
   const { fullName, username, phone, role, address } = req.body
   const file = req.file
-  const avatar = file?.filename ?? ""
+  const avatar = file?.filename ?? null
 
   //handle data here
   await handleCreateUser(fullName, username, address, phone, avatar)
