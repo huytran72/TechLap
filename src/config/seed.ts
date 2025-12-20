@@ -20,6 +20,9 @@ const innitDatabase = async () => {
     })
   } else if (countUser === 0) {
     const defaultPassword = await hashPassword("123456")
+    const adminRole = await prisma.role.findFirst({
+      where: { name: "ADMIN" },
+    })
 
     await prisma.user.createMany({
       data: [
