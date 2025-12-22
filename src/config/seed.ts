@@ -44,7 +44,7 @@ const innitDatabase = async () => {
         ],
       })
     }
-    if (countRole === 0 && countUser === 0) {
+    if (countRole !== 0 && countUser !== 0) {
       console.log("Database has been seeded")
     }
   }
