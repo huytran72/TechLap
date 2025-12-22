@@ -23,7 +23,7 @@ const innitDatabase = async () => {
     const adminRole = await prisma.role.findFirst({
       where: { name: "ADMIN" },
     })
-    if (adminRole)
+    if (adminRole) {
       await prisma.user.createMany({
         data: [
           {
