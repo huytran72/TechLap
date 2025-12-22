@@ -18,7 +18,8 @@ const innitDatabase = async () => {
         },
       ],
     })
-  } if (countUser === 0) {
+  }
+  if (countUser === 0) {
     const defaultPassword = await hashPassword("123456")
     const adminRole = await prisma.role.findFirst({
       where: { name: "ADMIN" },
@@ -42,8 +43,10 @@ const innitDatabase = async () => {
           },
         ],
       })
-  } else {
-    console.log("Database has been seeded")
+    }
+    if (countUser === 0) {
+      console.log("Database has been seeded")
+    }
   }
 }
 export default innitDatabase
