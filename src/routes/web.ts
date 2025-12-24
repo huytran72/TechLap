@@ -31,7 +31,7 @@ const webRoutes = (app: Express) => {
     fileUploadMiddleware("avatar"),
     postCreateUser
   )
-  router.post("/handle-delete-user/:id", postDeleteUser)
+  router.post("/admin/delete-user/:id", postDeleteUser)
   router.get("/admin/product", getAdminProductPage)
   router.get("/admin/order", getAdminOrderPage)
 
