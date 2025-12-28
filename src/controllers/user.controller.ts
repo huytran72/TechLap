@@ -40,7 +40,7 @@ const getViewUser = async (req: Request, res: Response) => {
   const { id } = req.params
 
   const user = await getUserById(id)
-  return res.render("view-user.ejs", { id: id, user: user })
+  return res.render("admin/user/detail.ejs", { id: id, user: user })
 }
 
 const postUpdateUser = async (req: Request, res: Response) => {
