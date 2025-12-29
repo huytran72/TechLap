@@ -44,7 +44,7 @@ const getViewUser = async (req: Request, res: Response) => {
   return res.render("admin/user/detail.ejs", {
     id: id,
     user: user,
-    roles: roles,
+    roles,
   })
 }
 
