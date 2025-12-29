@@ -25,7 +25,7 @@ const postCreateUser = async (req: Request, res: Response) => {
 
   //handle data here
   await handleCreateUser(fullName, username, address, phone, avatar, role)
-  return res.redirect("/")
+  return res.redirect("/admin/user")
 }
 
 const postDeleteUser = async (req: Request, res: Response) => {
