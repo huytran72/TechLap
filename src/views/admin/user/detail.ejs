@@ -105,15 +105,15 @@
                         accept=".png, .jpg, .jpeg"
                       />
                     </div>
-                    <img
+                    
+
+<% if (user.avatar) { %>
+   <img
                       style="max-height: 250px; display: block"
                       alt="avatar preview"
                       id="avatarPreview"
                       src="/images/<%= user.avatar %>"
                     />
-
-<% if (user.avatar) { %>
-   <div class="item acitve">
 <% } else { %>
    <div class="item">
 <% } %>
