@@ -31,7 +31,11 @@ const webRoutes = (app: Express) => {
   )
   router.post("/admin/delete-user/:id", postDeleteUser)
   router.get("/admin/view-user/:id", getViewUser)
-  router.post("/admin/update-user", postUpdateUser)
+  router.post(
+    "/admin/update-user",
+    fileUploadMiddleware("avatar"),
+    postUpdateUser
+  )
 
   router.get("/admin/product", getAdminProductPage)
   router.get("/admin/order", getAdminOrderPage)
