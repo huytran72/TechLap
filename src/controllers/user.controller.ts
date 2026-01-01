@@ -51,8 +51,8 @@ const getViewUser = async (req: Request, res: Response) => {
 const postUpdateUser = async (req: Request, res: Response) => {
   const { id, email, address, fullName } = req.body
 
-  await updateUserById(id, email, address, fullName)
-  return res.redirect("/")
+  // await updateUserById(id, email, address, fullName)
+  return res.redirect("/admin/user")
 }
 
 export {
