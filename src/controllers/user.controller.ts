@@ -31,7 +31,6 @@ const postCreateUser = async (req: Request, res: Response) => {
 const postDeleteUser = async (req: Request, res: Response) => {
   const { id } = req.params
 
-  //handle data here
   await handleDeleteUser(id)
   return res.redirect("/admin/user")
 }
