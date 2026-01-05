@@ -48,7 +48,7 @@ const getViewUser = async (req: Request, res: Response) => {
 }
 
 const postUpdateUser = async (req: Request, res: Response) => {
-  const { fullName, username, phone, role, address } = req.body
+  const { id, fullName, username, phone, role, address } = req.body
   const file = req.file
   const avatar = file?.filename ?? null
 
