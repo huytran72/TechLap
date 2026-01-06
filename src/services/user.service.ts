@@ -71,8 +71,7 @@ const updateUserById = async (
       roleId: +role,
       avatar: avatar,
       address: address,
-      password: "",
-      accountType: "",
+      ...(avatar !== undefined && { avatar: avatar }),
     },
   })
   return updatedUser
