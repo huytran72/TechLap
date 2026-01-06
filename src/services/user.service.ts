@@ -67,7 +67,9 @@ const updateUserById = async (
     where: { id: Number(id) },
     data: {
       fullName: fullName,
-      username: email,
+      phone: phone,
+      roleId: +role,
+      avatar: avatar,
       address: address,
       password: "",
       accountType: "",
