@@ -52,7 +52,7 @@ const postUpdateUser = async (req: Request, res: Response) => {
   const file = req.file
   const avatar = file?.filename ?? null
 
-  // await updateUserById(id, email, address, fullName)
+  await updateUserById(id, email, address, fullName)
   return res.redirect("/admin/user")
 }
 
