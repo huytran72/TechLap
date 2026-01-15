@@ -13,6 +13,8 @@ import {
   getAdminProductPage,
   getAdminOrderPage,
 } from "controllers/admin/dashboard.controller"
+
+import { getProductPage } from "controllers/client/product.controller"
 import fileUploadMiddleware from "src/middleware/multer"
 
 const router = express.Router()
