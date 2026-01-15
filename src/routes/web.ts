@@ -19,6 +19,7 @@ const router = express.Router()
 
 const webRoutes = (app: Express) => {
   router.get("/", getHomePage)
+  router.get("/product/:id", getProductPage)
 
   //admin routes
   router.get("/admin", getDashboardPage)
