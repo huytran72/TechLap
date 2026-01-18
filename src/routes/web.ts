@@ -12,6 +12,7 @@ import {
   getDashboardPage,
   getAdminProductPage,
   getAdminOrderPage,
+  getAdminCreateProductPage,
 } from "controllers/admin/dashboard.controller"
 
 import { getProductPage } from "controllers/client/product.controller"
@@ -44,7 +45,7 @@ const webRoutes = (app: Express) => {
   router.get(
     "/admin/create-product",
     fileUploadMiddleware("image", "images/products"),
-    getAdminProductPage
+    getAdminCreateProductPage
   )
 
   router.get("/admin/order", getAdminOrderPage)
