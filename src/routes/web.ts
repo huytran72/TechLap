@@ -12,8 +12,9 @@ import {
   getDashboardPage,
   getAdminProductPage,
   getAdminOrderPage,
-  getAdminCreateProductPage,
 } from "controllers/admin/dashboard.controller"
+
+import { getAdminCreateProductPage } from "controllers/admin/product.controller"
 
 import { getProductPage } from "controllers/client/product.controller"
 import fileUploadMiddleware from "src/middleware/multer"
