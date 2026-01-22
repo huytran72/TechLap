@@ -53,21 +53,42 @@
                     method="post"
                     enctype="multipart/form-data"
                   >
-                  <div class="row"> 
-                    <div class="mb-3 col-6">
-                      <label class="form-label">Name</label>
-                      <input name="name" type="text" class="form-control" />
+                    <div class="row">
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Name</label>
+                        <input name="name" type="text" class="form-control" />
+                      </div>
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Price</label>
+                        <input
+                          name="price"
+                          type="number"
+                          class="form-control"
+                        />
+                      </div>
                     </div>
-                    <div class="mb-3 col-6">
-                      <label class="form-label">Price</label>
-                      <input name="price" type="number" class="form-control" />
-                    </div>
-                  </div>
 
-                  <div class="mb-3">
-                    <label class="form-label">Detail Description:</label>
-                    <input type="text" class="form-control" name="phone" />
-                  </div>
+                    <div class="mb-3">
+                      <label class="form-label">Detail Description:</label>
+                      <textarea name="detailDesc" class="form-control" rows="2"></textarea>
+                    </div>
+
+                    <div class="row">
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Short Description</label>
+                        <input name="shortDesc" type="text" class="form-control" />
+                      </div>
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Quantity</label>
+                        <input
+                          name="quantity"
+                          type="number"
+                          class="form-control"
+                        />
+                      </div>
+                    </div>
+
+
                   <div class="mb-3 col-6">
                     <label class="form-label">Role</label>
                     <select name="role" class="form-select">
@@ -101,7 +122,8 @@
                         name="address"
                         class="form-control"
                         rows="2"
-                      ></textarea>
+                      ></textarea
+                      >
                     </div>
 
                     <div class="mb-3">
