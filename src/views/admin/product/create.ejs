@@ -53,6 +53,7 @@
                     method="post"
                     enctype="multipart/form-data"
                   >
+                  <div class="row"> 
                     <div class="mb-3 col-6">
                       <label class="form-label">Name</label>
                       <input name="name" type="text" class="form-control" />
@@ -61,22 +62,23 @@
                       <label class="form-label">Price</label>
                       <input name="price" type="number" class="form-control" />
                     </div>
-                    <div class="row">
-                      <div class="mb-3 col-6">
-                        <label class="form-label">Phone</label>
-                        <input type="text" class="form-control" name="phone" />
-                      </div>
-                      <div class="mb-3 col-6">
-                        <label class="form-label">Role</label>
-                        <select name="role" class="form-select">
-                          <% roles.forEach((role,index) => { %>
-                          <option value="<%-role.id %>">
-                            <%- role.name %>
-                          </option>
-                          <%})%>
-                        </select>
-                      </div>
-                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Detail Description:</label>
+                    <input type="text" class="form-control" name="phone" />
+                  </div>
+                  <div class="mb-3 col-6">
+                    <label class="form-label">Role</label>
+                    <select name="role" class="form-select">
+                      <% roles.forEach((role,index) => { %>
+                      <option value="<%-role.id %>">
+                        <%- role.name %>
+                      </option>
+                      <%})%>
+                    </select>
+                  </div>
+                    
 
                     <div class="mb-3">
                       <label for="formFile" class="form-label">Avatar</label>
