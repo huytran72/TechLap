@@ -70,13 +70,21 @@
 
                     <div class="mb-3">
                       <label class="form-label">Detail Description:</label>
-                      <textarea name="detailDesc" class="form-control" rows="2"></textarea>
+                      <textarea
+                        name="detailDesc"
+                        class="form-control"
+                        rows="2"
+                      ></textarea>
                     </div>
 
                     <div class="row">
                       <div class="mb-3 col-6">
                         <label class="form-label">Short Description</label>
-                        <input name="shortDesc" type="text" class="form-control" />
+                        <input
+                          name="shortDesc"
+                          type="text"
+                          class="form-control"
+                        />
                       </div>
                       <div class="mb-3 col-6">
                         <label class="form-label">Quantity</label>
@@ -88,44 +96,31 @@
                       </div>
                     </div>
 
-
-                  <div class="mb-3 col-6">
-                    <label class="form-label">Role</label>
-                    <select name="role" class="form-select">
-                      <% roles.forEach((role,index) => { %>
-                      <option value="<%-role.id %>">
-                        <%- role.name %>
-                      </option>
-                      <%})%>
-                    </select>
-                  </div>
-                  
-                  
-                  <div class="row">
-                    <div class="mb-3 col-6">
-                      <label class="form-label">Factory</label>
-                      <select name="factory" class="form-select">
-                        <option value="APPLE">Apple (MacBook)</option>
-                        <option value="ASUS">Asus</option>
-                        <option value="LENOVO">Lenovo</option>
-                        <option value="DELL">Dell</option>
-                        <option value="LG">LG</option>
-                        <option value="ACER">Acer</option>
-                      </select>
+                    <div class="row">
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Factory</label>
+                        <select name="factory" class="form-select">
+                          <option value="APPLE">Apple (MacBook)</option>
+                          <option value="ASUS">Asus</option>
+                          <option value="LENOVO">Lenovo</option>
+                          <option value="DELL">Dell</option>
+                          <option value="LG">LG</option>
+                          <option value="ACER">Acer</option>
+                        </select>
+                      </div>
+                      <div class="mb-3 col-6">
+                        <label class="form-label">Target</label>
+                        <select name="target" class="form-select">
+                          <option value="GAMING">Gaming</option>
+                          <option value="SINHVIEN-VANPHONG">
+                            Stutents - Office
+                          </option>
+                          <option value="THIET-KE-DO-HOA">Architechture</option>
+                          <option value="MONG-NHE">Light and Thin</option>
+                          <option value="DOANH-NHAN">Business</option>
+                        </select>
+                      </div>
                     </div>
-                    <div class="mb-3 col-6">
-                      <label class="form-label">Target</label>
-                      <select name="target" class="form-select">
-                        <option value="GAMING">Gaming</option>
-                        <option value="SINHVIEN-VANPHONG">Stutents - Office
-                        </option>
-                        <option value="THIET-KE-DO-HOA">Architechture</option>
-                        <option value="MONG-NHE">Light and Thin</option>
-                        <option value="DOANH-NHAN">Business</option>
-                      </select>
-                    </div>
-                  </div>
-
 
                     <div class="mb-3">
                       <label for="formFile" class="form-label">Image</label>
