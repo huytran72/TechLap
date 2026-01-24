@@ -48,11 +48,7 @@ const webRoutes = (app: Express) => {
     fileUploadMiddleware("image", "images/product"),
     getAdminCreateProductPage,
   )
-  router.post(
-    "/admin/create-product",
-    fileUploadMiddleware("image", "images/product"),
-    postAdminCreateProductPage,
-  )
+  router.post("/admin/create-product", postAdminCreateProduct)
 
   router.get("/admin/order", getAdminOrderPage)
 
