@@ -5,7 +5,7 @@ const getAdminCreateProductPage = async (req: Request, res: Response) => {
 }
 
 const postAdminCreateProduct = async (req: Request, res: Response) => {
-  return res.render("admin/product/create.ejs")
+  return res.redirect("/admin/product")
 }
 
 export { getAdminCreateProductPage, postAdminCreateProduct }
