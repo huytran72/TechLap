@@ -29,6 +29,3 @@ innitDatabase()
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`)
 })
-
-//config static files
-app.use(express.static("public"))
