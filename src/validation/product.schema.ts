@@ -7,6 +7,7 @@ export const ProductSchema = z.object({
   shortDesc: z.string().trim().min(1).optional(),
   quantity: z.number().min(0),
   factory: z.string().trim().min(1),
+  target: z.string().trim().min(1),
 
   //  name	      String @db.VarChar(255)
   // price		    Int
