@@ -5,6 +5,7 @@ export const ProductSchema = z.object({
   price: z.number().min(0),
   detailDesc: z.string().trim().min(1),
   shortDesc: z.string().trim().min(1).optional(),
+  quantity: z.number().min(0),
 
   //  name	      String @db.VarChar(255)
   // price		    Int
