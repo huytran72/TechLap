@@ -6,6 +6,8 @@ const getAdminCreateProductPage = async (req: Request, res: Response) => {
 }
 
 const postAdminCreateProduct = async (req: Request, res: Response) => {
+  const { name } = req.body as TProductSchema
+
   return res.redirect("/admin/product")
 }
 
