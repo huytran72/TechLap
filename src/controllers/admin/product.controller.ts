@@ -9,7 +9,9 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
   const { name } = req.body as TProductSchema
 
   try {
-  } catch (error) {}
+  } catch (error) {
+    console.log("Error creating product:", error)
+  }
 
   return res.redirect("/admin/product")
 }
