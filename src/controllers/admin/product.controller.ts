@@ -10,6 +10,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
 
   try {
     const result = ProductSchema.parse(req.body)
+    console.log("Product created:", result)
   } catch (error) {
     console.log("Error creating product:", error)
   }
