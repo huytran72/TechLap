@@ -9,8 +9,8 @@ export const ProductSchema = z.object({
     .min(1, { message: "Detail description is required" }),
   shortDesc: z.string().trim().min(1).optional(),
   quantity: z.number().min(0, { message: "Quantity must be non-negative" }),
-  factory: z.string().trim().min(1),
-  target: z.string().trim().min(1),
+  factory: z.string().trim().min(1, { message: "Factory is required" }),
+  target: z.string().trim().min(1, { message: "Target is required" }),
 })
 
 export type TProductSchema = z.infer<typeof ProductSchema>
