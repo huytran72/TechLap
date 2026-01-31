@@ -3,7 +3,10 @@ import { z } from "zod"
 export const ProductSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }),
   price: z.number().min(0, { message: "Price must be non-negative" }),
-  detailDesc: z.string().trim().min(1),
+  detailDesc: z
+    .string()
+    .trim()
+    .min(1, { message: "Detail description is required" }),
   shortDesc: z.string().trim().min(1).optional(),
   quantity: z.number().min(0),
   factory: z.string().trim().min(1),
