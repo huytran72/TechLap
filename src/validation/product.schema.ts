@@ -8,7 +8,7 @@ export const ProductSchema = z.object({
     .trim()
     .min(1, { message: "Detail description is required" }),
   shortDesc: z.string().trim().min(1).optional(),
-  quantity: z.number().min(0),
+  quantity: z.number().min(0, { message: "Quantity must be non-negative" }),
   factory: z.string().trim().min(1),
   target: z.string().trim().min(1),
 })
