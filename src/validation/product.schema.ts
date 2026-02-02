@@ -2,6 +2,12 @@ import { z } from "zod"
 
 export const ProductSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }),
+  price: z
+    .string()
+    .transform((val) => (val === "" ? 0 : Number(val)))
+    .refine((num) => num > 0, {
+      message: "Minimum price is 1",
+    }),
 
   detailDesc: z
     .string()
