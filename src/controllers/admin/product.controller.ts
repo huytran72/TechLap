@@ -9,7 +9,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
   const { name } = req.body as TProductSchema
 
   try {
-    const result = ProductSchema.parse(req.body)
+    const result = ProductSchema.safeParse(req.body)
     console.log("Product created:", result)
   } catch (error) {
     console.log("Error creating product:", error)
