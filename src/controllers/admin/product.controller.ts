@@ -10,6 +10,8 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
 
   const validate = ProductSchema.safeParse(req.body)
 
+  if (!validate.success) {
+    // error in validation
   try {
     const result = ProductSchema.safeParse(req.body)
     console.log("Product created:", result)
