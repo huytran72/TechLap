@@ -8,6 +8,8 @@ const getAdminCreateProductPage = async (req: Request, res: Response) => {
 const postAdminCreateProduct = async (req: Request, res: Response) => {
   const { name } = req.body as TProductSchema
 
+  const validate = ProductSchema.safeParse(req.body)
+
   try {
     const result = ProductSchema.safeParse(req.body)
     console.log("Product created:", result)
