@@ -8,7 +8,6 @@ export const ProductSchema = z.object({
     .refine((num) => num > 0, {
       message: "Minimum price is 1",
     }),
-
   detailDesc: z
     .string()
     .trim()
