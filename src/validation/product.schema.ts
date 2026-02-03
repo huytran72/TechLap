@@ -17,7 +17,7 @@ export const ProductSchema = z.object({
   quantity: z
     .string()
     .transform((val) => (val === "" ? 0 : Number(val)))
-    .refine((num) => num > 0, { message: "Quantity must be non-negative" }),
+    .refine((num) => num > 0, { message: "Quantity must be greater than 0" }),
   factory: z.string().trim().min(1, { message: "Factory is required" }),
   target: z.string().trim().min(1, { message: "Target is required" }),
 })
