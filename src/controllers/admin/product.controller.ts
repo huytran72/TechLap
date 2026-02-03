@@ -12,13 +12,8 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
 
   if (!validate.success) {
     // error in validation
-  try {
-    const result = ProductSchema.safeParse(req.body)
-    console.log("Product created:", result)
-  } catch (error) {
-    console.log("Error creating product:", error)
   }
-
+  // success in validation
   return res.redirect("/admin/product")
 }
 
