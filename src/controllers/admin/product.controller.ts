@@ -13,7 +13,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
   if (!validate.success) {
     // error in validation
     const errorsZod = validate.error.issues
-    const error = []
+    const error = errorsZod.map((item) => `${item.message} (${item.path[0]})`)
   }
   // success in validation
   return res.redirect("/admin/product")
