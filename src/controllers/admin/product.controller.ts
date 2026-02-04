@@ -12,6 +12,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
 
   if (!validate.success) {
     // error in validation
+    const errorsZod = validate.error.issues
   }
   // success in validation
   return res.redirect("/admin/product")
