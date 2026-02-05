@@ -14,6 +14,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
     // error in validation
     const errorsZod = validate.error.issues
     const error = errorsZod.map((item) => `${item.message} (${item.path[0]})`)
+    return res.render("admin/product/create.ejs")
   }
   // success in validation
   return res.redirect("/admin/product")
