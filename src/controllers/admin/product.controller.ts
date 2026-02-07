@@ -1,8 +1,8 @@
-import { Request, Response } from "express"
+import e, { Request, Response } from "express"
 import { TProductSchema, ProductSchema } from "src/validation/product.schema"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
-  const error = []
+  const errors = []
   return res.render("admin/product/create.ejs")
 }
 
@@ -15,7 +15,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
     // error in validation
     const errorsZod = validate.error.issues
     const error = errorsZod.map((item) => `${item.message} (${item.path[0]})`)
-    return res.render("admin/product/create.ejs")
+    return res.render("admin/product/create.ejs", { errors })
   }
   // success in validation
   return res.redirect("/admin/product")
