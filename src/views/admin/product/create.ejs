@@ -50,9 +50,36 @@
                   <div class="alert alert-danger mb-3">
                     A simple danger alert—check it out!
                   </div>
-                  <div class="alert alert-danger mb-3">
-                    A simple danger alert—check it out!
-                  </div>
+                  <% users.forEach( function (user) { %>
+                  <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.address %></td>
+                    <td>
+                      <div style="display: flex; gap: 10px">
+                        <!-- <a href="/handle-view-user/<%= user.id %>">View a</a> -->
+                        <form
+                          action="/admin/view-user/<%= user.id %>"
+                          method="get"
+                        >
+                          <button type="submit" class="btn btn-warning">
+                            View
+                          </button>
+                        </form>
+                        <form
+                          action="/admin/delete-user/<%= user.id %>"
+                          method="post"
+                        >
+                          <button type="submit" class="btn btn-danger">
+                            Delete
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                  </tr>
+                  <% }) %>
+
                   <h5 style="padding: 10px 0">Create A Product:</h5>
                   <form
                     action="/admin/create-product"
