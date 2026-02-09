@@ -7,6 +7,10 @@ const getAdminCreateProductPage = async (req: Request, res: Response) => {
     name: "",
     price: "",
     detailDesc: "",
+    shortDesc: "",
+    quantity: "",
+    factory: "",
+    target: "",
   }
   return res.render("admin/product/create.ejs", { errors })
 }
