@@ -1,4 +1,4 @@
-import e, { Request, Response } from "express"
+import { Request, Response } from "express"
 import { TProductSchema, ProductSchema } from "src/validation/product.schema"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
@@ -16,7 +16,8 @@ const getAdminCreateProductPage = async (req: Request, res: Response) => {
 }
 
 const postAdminCreateProduct = async (req: Request, res: Response) => {
-  const { name } = req.body as TProductSchema
+  const { name, price, detailDesc, shortDesc, quantity, factory, target } =
+    req.body as TProductSchema
 
   const validate = ProductSchema.safeParse(req.body)
 
