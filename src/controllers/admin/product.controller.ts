@@ -3,7 +3,11 @@ import { TProductSchema, ProductSchema } from "src/validation/product.schema"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
   const errors = []
-  const oldDate = {}
+  const oldDate = {
+    name: "",
+    price: "",
+    detailDesc: "",
+  }
   return res.render("admin/product/create.ejs", { errors })
 }
 
