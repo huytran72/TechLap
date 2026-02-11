@@ -34,7 +34,7 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
       factory,
       target,
     }
-    return res.render("admin/product/create.ejs", { errors })
+    return res.render("admin/product/create.ejs", { errors, oldData })
   }
   // success in validation
   return res.redirect("/admin/product")
