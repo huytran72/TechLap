@@ -19,6 +19,7 @@ export const ProductSchema = z.object({
     .refine((num) => num > 0, { message: "Quantity must be greater than 0" }),
   factory: z.string().trim().min(1, { message: "Factory is required" }),
   target: z.string().trim().min(1, { message: "Target is required" }),
+  // image: z.string().trim().min(1, { message: "Image is required" }).optional(),
 })
 
 export type TProductSchema = z.infer<typeof ProductSchema>
