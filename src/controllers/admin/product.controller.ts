@@ -37,6 +37,18 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
     return res.render("admin/product/create.ejs", { errors, oldData })
   }
   // success in validation
+  const image = req?.file?.filename ?? null
+  await createProduct(
+    name,
+    price,
+    detailDesc,
+    shortDesc,
+    quantity,
+    factory,
+    target,
+    image,
+  )
+
   return res.redirect("/admin/product")
 }
 
