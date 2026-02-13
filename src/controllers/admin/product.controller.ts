@@ -40,10 +40,10 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
   const image = req?.file?.filename ?? null
   await createProduct(
     name,
-    price,
+    +price,
     detailDesc,
     shortDesc,
-    quantity,
+    +quantity,
     factory,
     target,
     image,
