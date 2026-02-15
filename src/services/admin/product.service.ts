@@ -1,6 +1,15 @@
 import { prisma } from "config/client"
 
-const createProduct = async (name: string, price: number) => {
+const createProduct = async (
+  name: string,
+  price: number,
+  detailDesc: string,
+  shortDesc: string,
+  quantity: number,
+  factory: string,
+  target: string,
+  imageUpload: string,
+) => {
   await prisma.product.create({
     data: {
       name,
