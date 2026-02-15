@@ -14,6 +14,10 @@ const createProduct = async (
     data: {
       name,
       price,
+      detailDesc,
+      shortDesc,
+      quantity,
+      factory,
     },
   })
 }
