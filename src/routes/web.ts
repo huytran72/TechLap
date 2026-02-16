@@ -53,6 +53,8 @@ const webRoutes = (app: Express) => {
     postAdminCreateProduct,
   )
 
+  router.post("/admin/delete-product/:id", postDeleteProduct)
+
   router.get("/admin/order", getAdminOrderPage)
 
   app.use("/", router)
