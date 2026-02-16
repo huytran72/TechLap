@@ -44,7 +44,6 @@ model Product {
   id		      Int     @id @default(autoincrement())
   name	      String @db.VarChar(255)
   price		    Int 
-  image		    String @db.VarChar(255)
   detailDesc	String @db.VarChar(255)
   shortDesc	  String @db.VarChar(255)
   quantity	  Int
