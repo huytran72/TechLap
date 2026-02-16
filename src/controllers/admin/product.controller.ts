@@ -1,5 +1,6 @@
 import { Request, Response } from "express"
 import { TProductSchema, ProductSchema } from "src/validation/product.schema"
+import { createProduct } from "services/admin/product.service"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
   const errors = []
