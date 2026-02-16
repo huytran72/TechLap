@@ -11,6 +11,7 @@ const createProduct = async (
   imageUpload: string,
 ) => {
   await prisma.product.create({
+    where: { id },
     data: {
       name,
       price,
