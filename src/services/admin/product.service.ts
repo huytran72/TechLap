@@ -24,6 +24,8 @@ const createProduct = async (
   })
 }
 
-const getProductList = async () => {}
+const getProductList = async () => {
+  return await prisma.product.findMany()
+}
 
-export { createProduct }
+export { createProduct, getProductList }
