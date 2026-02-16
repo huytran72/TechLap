@@ -18,6 +18,8 @@ const createProduct = async (
       shortDesc,
       quantity,
       factory,
+      target,
+      ...(imageUpload && { image: imageUpload }),
     },
   })
 }
