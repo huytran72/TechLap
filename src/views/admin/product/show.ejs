@@ -61,12 +61,12 @@
                     <td><%= product.id %></td>
                     <td><%= product.name %></td>
                     <td><%= product.price %></td>
-                    <td><%= product.quantity %></td>
+                    <td><%= product.factory %></td>
                     <td>
                       <div style="display: flex; gap: 10px">
                         <!-- <a href="/handle-view-user/<%= user.id %>">View a</a> -->
                         <form
-                          action="/admin/view-user/<%= user.id %>"
+                          action="/admin/view-product/<%= product.id %>"
                           method="get"
                         >
                           <button type="submit" class="btn btn-warning">
