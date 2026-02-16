@@ -55,7 +55,37 @@
                   <th>Address</th>
                   <th>Actions</th>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                                    <% products.forEach( function (product) { %>
+                  <tr>
+                    <td><%= product.id %></td>
+                    <td><%= product.name %></td>
+                    <td><%= product.price %></td>
+                    <td><%= product.quantity %></td>
+                    <td>
+                      <div style="display: flex; gap: 10px">
+                        <!-- <a href="/handle-view-user/<%= user.id %>">View a</a> -->
+                        <form
+                          action="/admin/view-user/<%= user.id %>"
+                          method="get"
+                        >
+                          <button type="submit" class="btn btn-warning">
+                            View
+                          </button>
+                        </form>
+                        <form
+                          action="/admin/delete-user/<%= user.id %>"
+                          method="post"
+                        >
+                          <button type="submit" class="btn btn-danger">
+                            Delete
+                          </button>
+                        </form>
+                      </div>
+                    </td>
+                  </tr>
+                  <% }) %>
+                </tbody>
               </table>
             </div>
           </div>
