@@ -24,4 +24,6 @@ const createProduct = async (
   })
 }
 
+const getProductList = async () => {}
+
 export { createProduct }
