@@ -49,8 +49,11 @@ const postAdminCreateProduct = async (req: Request, res: Response) => {
     target,
     image,
   )
-
   return res.redirect("/admin/product")
+}
+
+const postDeleteProduct = async (req: Request, res: Response) => {
+  const { id } = req.params
 }
 
 export { getAdminCreateProductPage, postAdminCreateProduct }
