@@ -1,6 +1,9 @@
 import { Request, Response } from "express"
 import { TProductSchema, ProductSchema } from "src/validation/product.schema"
-import { createProduct } from "services/admin/product.service"
+import {
+  createProduct,
+  handleDeleteProduct,
+} from "services/admin/product.service"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
   const errors = []
@@ -57,5 +60,7 @@ const postDeleteProduct = async (req: Request, res: Response) => {
   await handleDeleteProduct(+id)
   return res.redirect("/admin/product")
 }
+
+const getViewProduct = async (req: Request, res: Response) => {}
 
 export { getAdminCreateProductPage, postAdminCreateProduct, postDeleteProduct }
