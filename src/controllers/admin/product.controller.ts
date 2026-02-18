@@ -4,6 +4,7 @@ import {
   createProduct,
   handleDeleteProduct,
 } from "services/admin/product.service"
+import { get } from "http"
 
 const getAdminCreateProductPage = async (req: Request, res: Response) => {
   const errors = []
@@ -61,6 +62,9 @@ const postDeleteProduct = async (req: Request, res: Response) => {
   return res.redirect("/admin/product")
 }
 
-const getViewProduct = async (req: Request, res: Response) => {}
+const getViewProduct = async (req: Request, res: Response) => {
+  const { id } = req.params
+  const product = await getProductById(+id)
+}
 
 export { getAdminCreateProductPage, postAdminCreateProduct, postDeleteProduct }
