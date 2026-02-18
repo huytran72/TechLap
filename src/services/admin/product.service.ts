@@ -29,4 +29,6 @@ const getProductList = async () => {
   return await prisma.product.findMany()
 }
 
+const handleDeleteProduct = async (id: number) => {
+
 export { createProduct, getProductList }
