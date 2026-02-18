@@ -65,6 +65,23 @@ const postDeleteProduct = async (req: Request, res: Response) => {
 const getViewProduct = async (req: Request, res: Response) => {
   const { id } = req.params
   const product = await getProductById(+id)
+
+  const factoryOptions = [
+    { name: "Apple (MacBook)", value: "APPLE" },
+    { name: "Asus", value: "ASUS" },
+    { name: "Lenovo", value: "LENOVO" },
+    { name: "Dell", value: "DELL" },
+    { name: "LG", value: "LG" },
+    { name: "Acer", value: "ACER" },
+  ]
+
+  const targetOptions = [
+    { name: "Gaming", value: "GAMING" },
+    { name: "Sinh viên - Văn phòng", value: "SINHVIEN-VANPHONG" },
+    { name: "Thiết kế đồ họa", value: "THIET-KE-DO-HOA" },
+    { name: "Mỏng nhẹ", value: "MONG-NHE" },
+    { name: "Doanh nhân", value: "DOANH-NHAN" },
+  ]
 }
 
 export { getAdminCreateProductPage, postAdminCreateProduct, postDeleteProduct }
