@@ -35,4 +35,4 @@ const handleDeleteProduct = async (id: number) => {
   })
 }
 
-export { createProduct, getProductList }
+export { createProduct, getProductList, handleDeleteProduct }
