@@ -82,6 +82,7 @@ const getViewProduct = async (req: Request, res: Response) => {
     { name: "Mỏng nhẹ", value: "MONG-NHE" },
     { name: "Doanh nhân", value: "DOANH-NHAN" },
   ]
-}
+  
+  return res.render("admin/product/view.ejs", {})
 
 export { getAdminCreateProductPage, postAdminCreateProduct, postDeleteProduct }
