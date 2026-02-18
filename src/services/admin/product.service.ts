@@ -30,5 +30,9 @@ const getProductList = async () => {
 }
 
 const handleDeleteProduct = async (id: number) => {
+  await prisma.product.delete({
+    where: { id },
+  })
+}
 
 export { createProduct, getProductList }
